@@ -1,0 +1,459 @@
+@import fonts
+@import normalize
+@import mobile
+body
+    height: 100vh
+    background-color: #999
+    display: flex
+    flex-direction: column
+.mobile__menu-container
+    padding-left: 80px
+.mobile__menu
+    position: fixed
+    right: 0
+    width: 50vw
+    height: 100vh
+    background-color: #fff
+    transition: all .3s ease-in-out
+    .control__panel
+        width: 100%
+        display: flex
+        align-content: flex-start
+        justify-content: flex-end
+        padding: 40px
+        box-sizing: border-box
+        .close__menu
+            border: 0
+            background-color: transparent
+    .mobile-nav
+        display: flex
+        flex-direction: column
+        gap: 50px
+        a.mobile-nav-a
+            font-family: 'Core Sans C'
+            font-style: normal
+            font-weight: 400
+            font-size: 25px
+            line-height: 19px
+            color: #171723
+            text-decoration: none
+    .call__number
+        margin-top: 50px
+        .info a
+            font-family: "Core Sans C"
+            font-style: normal
+            font-weight: 400
+            font-size: 20px
+            line-height: 23px
+            letter-spacing: -0.03em
+            color: #171723
+            text-decoration: none
+    .social__networks-mobile
+        margin-top: 50px
+        .sn__container-mobile
+            display: flex
+            gap: 30px
+            a
+                width: 50px
+                height: 50px
+                background-color: rgb(51 51 51 / 50%)
+                display: block
+                border-radius: 50%
+                text-align: center
+                line-height: 55px
+
+.mobile__menu-on
+    transform: translateX(0vw)
+.video__slider
+    position: fixed
+    z-index: -1
+    width: 100vw
+    height: 100vh
+    .blackout-on
+        background-color: rgb(0 0 0 / 20%)
+        width: 100%
+        height: 100%
+        position: fixed
+        top: 0
+        left: 0
+        transition: all .2s ease-in-out
+main
+    flex: 1 0 auto
+    display: flex
+    justify-content: center
+    align-items: center
+.header__container
+    display: flex
+    justify-content: space-between
+    padding: 40px
+    .info
+        a
+            text-decoration: none
+            .tel__number
+                font-family: 'Core Sans C'
+                font-style: normal
+                font-weight: 400
+                font-size: 20px
+                line-height: 23px
+                letter-spacing: -0.03em
+                color: #FFFFFF
+                text-decoration: none
+            .tel__icon
+                display: none
+        & p
+            font-family: 'Core Sans C'
+            font-style: normal
+            font-weight: 400
+            font-size: 16px
+            line-height: 19px
+            color: #FFFFFF
+            opacity: 0.5
+            margin: 0
+    nav
+        font-family: 'Core Sans C'
+        font-style: normal
+        font-weight: 400
+        font-size: 16px
+        line-height: 19px
+        overflow: hidden
+        & a
+            position: relative
+            top: 0
+            color: #FFFFFF
+            text-decoration: none
+            &:hover
+                top: -20px
+                transition: all 0.2s ease
+            &:hover::before
+                content: attr(data-text)
+                opacity: 0.5
+                position: absolute
+                top: 20px
+                transition: all 0.2s ease
+    .menu__burger
+        color: #fff
+        display: inline
+        &:hover
+            cursor: pointer
+.logo
+    display: flex
+    justify-content: center
+    align-items: center
+    &__icon
+        border-radius: 50%
+        display: flex
+        justify-content: center
+        align-items: center
+        color: #fff
+        width: 47px
+        height: 47px
+        left: 40px
+        top: 34px
+        background: radial-gradient(66.89% 66.89% at 59.24% 24.84%, #FEC8C1 0%, rgba(229, 106, 89, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #D13233
+        box-shadow: -6px 8px 8px rgba(0, 0, 0, 0.1)
+        font-family: 'Core Sans C'
+        font-style: normal
+        font-weight: 600
+        font-size: 16px
+        line-height: 16px
+    & p
+        font-family: 'Core Sans C'
+        font-style: normal
+        font-weight: 600
+        font-size: 16px
+        line-height: 16px
+        color: #FFFFFF
+        margin-left: 10px
+.main__container
+    width: 100%
+    display: flex
+    justify-content: space-between
+    padding-right: 40px
+.sn__container
+    display: flex
+    flex-direction: column
+    text-align: center
+    gap: 30px
+    margin-left: 40px
+    width: 25px
+
+.social__networks
+    height: 100%
+    display: flex
+    gap: 133px
+    flex-direction: column
+    .sn__logo
+        width: 205px
+        height: 55px
+        background-color: #fff
+        clip-path: polygon(100% 0%, 97% 50%, 100% 100%, 0 100%, 0% 50%, 0 0)
+.nav__information
+    .list
+        padding: 0
+        margin: 0
+        list-style-position: inside
+        -moz-column-count: 2
+        -webkit-column-count: 2
+        column-count: 2
+        list-style-type: none
+        li
+            margin-bottom: 10px
+        a
+            font-family: 'Core Sans C'
+            font-style: normal
+            font-weight: 400
+            font-size: 16px
+            line-height: 19px
+            text-decoration-line: underline
+            color: #FFFFFF
+            opacity: 0.6
+            transition: opacity .2s ease-in-out
+            &:hover
+                opacity: 1
+                text-decoration-color: #d6d6d6
+.hover__card
+    transform: translateY(15px)
+    opacity: 0
+    transition: all .3s ease-in-out
+    margin-top: 23px
+    .thick-text
+        font-family: 'Core Sans C'
+        font-style: normal
+        font-weight: 400
+        font-size: 16px
+        line-height: 19px
+        color: #FFFFFF
+    .grey-text
+        font-family: 'Core Sans C'
+        font-style: normal
+        font-weight: 400
+        font-size: 16px
+        line-height: 19px
+        color: #FFFFFF
+        opacity: 0.5
+.active
+    transform: translateY(0px)
+    opacity: 1
+.sliders__container
+    width: 581px
+    .slide
+        font-family: 'Core Sans C'
+        font-style: normal
+        font-weight: 400
+        font-size: 40px
+        line-height: 47px
+        letter-spacing: -0.02em
+        color: #FFFFFF
+        p
+            margin: 0
+.slider__btn-container
+    display: flex
+    flex-wrap: nowrap
+    align-items: flex-start
+.slider
+    display: flex
+    gap: 30px
+.arrow-naw-s
+    border: 0
+    background-color: transparent
+    padding: 11px 16px
+    border-radius: 50%
+    transition: all .2s ease-in-out
+    &:hover
+        box-shadow: 0 0 0 1px #fff
+.btn-choose-apartment
+    border: solid 1px #fff
+    background-color: transparent
+    color: #fff
+    border-radius: 7px
+    padding: 20px 23px
+    margin-top: 50px
+    margin-left: 117px
+    transition: all .3s ease-in-out
+    &:hover
+        box-shadow: inset 0 0 0 30px #fff
+        color: #000
+        .btn__icon-plus
+            filter: brightness(0)
+    .btn__icon-plus
+        padding-right: 12px
+.buy__apartment
+    font-family: 'Core Sans C'
+    font-style: normal
+    font-weight: 400
+    font-size: 16px
+    line-height: 16px
+    color: #FFFFFF
+    flex: none
+    order: 0
+    flex-grow: 0
+    text-decoration: none
+    margin-left: 30px
+    border: 0
+    background-color: transparent
+    padding: 0
+    &:hover .ba__arrow
+        margin-left: 15px
+    .ba__arrow
+        transition: all .2s ease-in-out
+.mobile__logo
+    display: none
+footer
+    display: flex
+    justify-content: space-between
+    flex-shrink: 0
+    padding: 35px 40px 42px 40px
+    align-items: flex-end
+    border-top: 1px solid rgba(255, 255, 255, 0.15)
+    .footer__container
+        display: flex
+        justify-content: space-between
+        align-items: flex-end
+        width: 100%
+    .footer__label
+        font-family: 'Core Sans C'
+        font-style: normal
+        font-weight: 400
+        font-size: 13px
+        line-height: 13px
+        color: #FFFFFF
+    .btn__f-container
+        padding: 21px 24px
+        border-radius: 7px
+        background-color: transparent
+    .number__rooms
+        display: flex
+        border-radius: 7px
+        overflow: hidden
+        font-family: 'Core Sans C'
+        font-style: normal
+        font-weight: 400
+        font-size: 16px
+        line-height: 16px
+        margin-top: 14px
+    .btn-nr
+        padding: 21px 23px
+        margin: 0
+        border: 0
+        background: rgba(255, 255, 255, 0.16)
+        transition: all .2s ease-in-out
+        box-shadow: 0 0 0 1px rgb(255 255 255 / 30%)
+        color: #fff
+        &:hover
+            background-color: #fff
+            color: #171723
+    .input__block
+        background: rgba(255, 255, 255, 0.16)
+        border-radius: 7px
+        padding: 21px 23px
+        color: #fff
+        margin-top: 14px
+        position: relative
+        .input__container
+            display: flex
+            flex-wrap: nowrap
+        input.border-input
+            position: absolute
+            width: 250px
+            transform: translateY(18px)
+        .border-input[type=range]
+            -webkit-appearance: none
+            border-radius: 8px
+            height: 3px
+            background-color: #D90002
+        .border-input[type='range']::-webkit-slider-thumb
+            -webkit-appearance: none
+            background-color: #D90002
+            width: 21px
+            height: 21px
+            border-radius: 50%
+            cursor: pointer
+        .input-container
+            width: 100px
+            border: 0
+            background-color: transparent
+            font-family: 'Core Sans C'
+            font-style: normal
+            font-weight: 400
+            font-size: 16px
+            line-height: 16px
+            color: #FFFFFF
+        .ib-span
+            font-family: 'Core Sans C'
+            font-style: normal
+            font-weight: 400
+            font-size: 16px
+            line-height: 16px
+            color: #FFFFFF
+            opacity: 0.4
+    .list-block
+        margin-top: 14px
+        border: 0
+        background-color: rgba(255, 255, 255, 0.16)!important
+        font-family: 'Core Sans C'
+        font-style: normal
+        font-weight: 400
+        font-size: 16px
+        line-height: 16px
+        color: #FFFFFF
+.split
+    width: 1px
+    height: 20px
+    background-color: rgb(255 255 255 / 30%)
+    box-shadow: 0px -20px 0 0px rgb(255 255 255 / 30%), 0 20px 0 0 rgb(255 255 255 / 30%)
+    margin-right: 15px
+.filter__container
+    display: flex
+    flex-direction: column
+.btn-red
+    font-family: 'Core Sans C'
+    font-style: normal
+    font-weight: 400
+    font-size: 16px
+    line-height: 16px
+    color: #FFFFFF
+    background-color: #D90002!important
+    border: 0
+.btn-border
+    display: flex
+    justify-content: center
+    align-items: center
+    border: 1px solid rgb(255 255 255 / 60%)
+    padding: 10px 23px!important
+.btn-inside-text
+    margin: 0
+    text-align: left
+    font-family: 'Core Sans C'
+    font-style: normal
+    font-weight: 400
+    font-size: 13px
+    line-height: 130.3%
+    color: #FFFFFF
+.inside-icon
+    margin-right: 15px
+.footer__container-mobile
+    display: none
+    width: 100%
+.footer-search:focus-visible
+    outline: 0
+.footer-search::placeholder
+    color: #fff
+.footer-search
+    border: 0
+    padding: 0
+    margin: 0
+    background-color: transparent
+    font-family: 'Core Sans C'
+    font-style: normal
+    font-weight: 500
+    font-size: 14px
+    line-height: 14px
+    color: #FFFFFF
+.serch-label-f
+    padding: 20px
+    background: rgba(255, 255, 255, 0.3)
+    border-radius: 7px
+    color: #fff
+    width: 100%
+    display: flex
+    justify-content: space-between
